@@ -6,11 +6,6 @@ const idTable="5315435";
 router.get('/data-table', async (request,response)  => {
 
     const res = await hubspotClient.cms.hubdb.rowsApi.getTableRows(idTable)
-    //console.log(res.results)
-   /* const valuesTable = res.results.map(function(getRows) {
-        return getRows.values;
-    });*/
-    //console.log(valuesTable)
     response.send(res)
 });
 
